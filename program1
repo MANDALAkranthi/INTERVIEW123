@@ -1,0 +1,19 @@
+str_1 = "AAAA"
+str_2 = "1234567"
+
+def divisible_numbers(n):
+  for i in range(n+1):
+    if i % 5 == 0 and i % 7 == 0:
+      yield i
+
+def interleave_strings(str1, str2):
+  res = " ".join([a + b for a, b in zip(str1, str2)])
+  return res
+
+N1 = 100
+list = [x for x in divisible_numbers(N1)]
+print("Total divisible numbers::", ','.join(str(x) for x in list))
+
+interleaved_string = interleave_strings(str_1, str_2)
+print("Total interleaved string::", interleaved_string)
+
